@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "651491496899",
+    "project_id": "colombialugares",
+    "storage_bucket": "colombialugares.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:651491496899:android:83ab46b763671946ad6376",
+        "android_client_info": {
+          "package_name": "com.example.flutter_colimbia_lugares"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBrN0SYoaRYnM_Wd8iX4qw_CeD15qR9h2I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:651491496899:android:7a517404492bd019ad6376",
+        "android_client_info": {
+          "package_name": "com.example.flutter_colombia"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBrN0SYoaRYnM_Wd8iX4qw_CeD15qR9h2I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
