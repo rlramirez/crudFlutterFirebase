@@ -1,9 +1,9 @@
-import 'package:device_preview/device_preview.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_colombia/firebase_options.dart';
 import 'package:flutter_colombia/pages/add_lugar.dart';
 import 'package:flutter_colombia/pages/edit_lugar.dart';
+import 'package:flutter_colombia/pages/list_lugares.dart';
 import 'package:flutter_colombia/pages/mainpage.dart';
 import 'package:flutter_colombia/pages/splash.dart';
 
@@ -34,7 +34,8 @@ class MyApp extends StatelessWidget {
         '/': (context) => const MainPage(),
         '/splash': (context) => const Splash(),
         '/add': (context) => const AddLugar(),
-        "/edit": (context) => const EditLugar()
+        "/edit": (context) => const EditLugar(),
+        "/list": (context) => const ListLugares()
       },
     );
   }

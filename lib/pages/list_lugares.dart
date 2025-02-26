@@ -60,6 +60,8 @@ class _HomeState extends State<ListLugares> {
                       snapshot.data?[index]['uid'],
                     ),
                     child: Card(
+                      elevation: 15,
+                      margin: EdgeInsets.all(15),
                       child: Column(
                         children: [
                           Image(
@@ -98,28 +100,37 @@ class _HomeState extends State<ListLugares> {
                                 TextButton(
                                   child: const Text('ELIMINAR'),
                                   onPressed: () {
-                                    deleteLugar(snapshot.data?[index]['uid']);
-                                    snapshot.data?.removeAt(index);
-                                    setState(() {});
+                                    /* deleteLugar(snapshot.data?[index]['uid']);
+                                        snapshot.data?.removeAt(index);
+                                        setState(() {});*/
 
-                                    /* AlertDialog(
-                                      title: Text(
-                                          "Estas seguro de borrar a: ${snapshot.data?[index]['nombre']}?"),
-                                      actions: [
-                                        TextButton(
+                                    showDialog<String>(
+                                      context: context,
+                                      builder: (BuildContext context) =>
+                                          AlertDialog(
+                                        title: const Text(
+                                            'Esta seguro que desea eliminar el registro?'),
+                                        content: const Text(
+                                            'Se eliminrá completamente de la DB'),
+                                        actions: <Widget>[
+                                          TextButton(
+                                            onPressed: () => Navigator.pop(
+                                                context, 'Cancel'),
+                                            child: const Text('Cancel'),
+                                          ),
+                                          TextButton(
                                             onPressed: () {
-                                              return Navigator.pop(
-                                                  context, false);
+                                              deleteLugar(
+                                                  snapshot.data?[index]['uid']);
+                                              snapshot.data?.removeAt(index);
+                                              Navigator.pop(context, 'OK');
+                                              setState(() {});
                                             },
-                                            child: const Text("Cancelar")),
-                                        TextButton(
-                                            onPressed: () {
-                                              return Navigator.pop(
-                                                  context, true);
-                                            },
-                                            child: const Text("Aceptar"))
-                                      ],
-                                    );*/
+                                            child: const Text('OK'),
+                                          ),
+                                        ],
+                                      ),
+                                    );
                                   },
                                 ),
                                 const SizedBox(width: 8),
@@ -143,6 +154,20 @@ class _HomeState extends State<ListLugares> {
         },
         child: const Icon(Icons.add),
       ),
+    );
+  }
+}
+
+class _NameCard extends StatelessWidget {
+  const _NameCard({required this.cardName});
+  final String cardName;
+
+  @override
+  Widget build(BuildContext context) {
+    return SizedBox(
+      width: 200,
+      height: 25,
+      child: Center(child: Text(cardName)),
     );
   }
 }
